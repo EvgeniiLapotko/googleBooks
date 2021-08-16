@@ -1,0 +1,28 @@
+.results {
+    padding-bottom: 40px;
+    &_btn {
+        text-align: center;
+        button {
+            outline: none;
+            width: 40%;
+            padding: 10px 10px;
+            background-color: #015a84;
+            border: none;
+            border-radius: 7px;
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+}
+
+.results-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.results__inner {
+    margin-left: -25px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+}

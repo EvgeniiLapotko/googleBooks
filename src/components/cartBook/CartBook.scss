@@ -1,0 +1,32 @@
+.results__item {
+    background-color: rgba(0, 0, 0, 0.04);
+    margin-left: 25px;
+    flex-basis: calc(25% - 25px);
+    margin-bottom: 25px;
+    padding: 25px 10px;
+    border-radius: 7px;
+    transition: transform 0.3s;
+    &-img {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &-categories {
+        color: grey;
+        text-decoration: underline;
+        margin-bottom: 10px;
+    }
+
+    &-name {
+        font-weight: 700;
+        margin-bottom: 5px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    &-autor {
+        color: gray;
+    }
+    &:hover {
+        transform: translateY(-5px);
+        background-color: rgba(0, 0, 0, 0.06);
+    }
+}
