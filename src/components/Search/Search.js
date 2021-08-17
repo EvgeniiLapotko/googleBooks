@@ -7,14 +7,14 @@ import { ImSearch } from "react-icons/im";
 import { getBooks } from "../../redux/actions/actionBooks";
 function Search() {
     const [textFeild, setTextFeild] = useState("");
-    const [categories, setCategories] = useState(0);
-    const [sorting, setSorting] = useState(0);
+    const [categories, setCategories] = useState("all");
+    const [sorting, setSorting] = useState("relevance");
 
     const dispatch = useDispatch();
 
     const submitForm = (e) => {
         e.preventDefault();
-        dispatch(getBooks(textFeild));
+        dispatch(getBooks(textFeild, categories, sorting));
     };
     return (
         <section className="search">
@@ -48,13 +48,13 @@ function Search() {
                                         setCategories(e.target.value)
                                     }
                                 >
-                                    <option value="0">All</option>
-                                    <option value="1">art</option>
-                                    <option value="2">biography</option>
-                                    <option value="3">computers</option>
-                                    <option value="4">history</option>
-                                    <option value="5">medical</option>
-                                    <option value="6">poetry</option>
+                                    <option value="all">All</option>
+                                    <option value="art">art</option>
+                                    <option value="biography">biography</option>
+                                    <option value="computers">computers</option>
+                                    <option value="history4">history</option>
+                                    <option value="medical">medical</option>
+                                    <option value="poetry">poetry</option>
                                 </select>
                             </div>
                             <div className="search__form-block search__form-sorting">
@@ -68,8 +68,8 @@ function Search() {
                                     value={sorting}
                                     onChange={(e) => setSorting(e.target.value)}
                                 >
-                                    <option value="0">relevance </option>
-                                    <option value="1">newest</option>
+                                    <option value="relevance">relevance</option>
+                                    <option value="newest">newest</option>
                                 </select>
                             </div>
                         </div>

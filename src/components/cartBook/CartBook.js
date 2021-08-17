@@ -1,12 +1,16 @@
 import React from "react";
 import "./CartBook.scss";
+import bg from "../../img/books-bg.jpg";
 
 function CartBook({ image, title, authors, categories }) {
-    console.log(image);
     return (
         <div className="results__item">
             <div className="results__item-img">
-                <img src={image.thumbnail} alt="prev" width="250" />
+                <img
+                    src={image === undefined ? bg : image.thumbnail}
+                    alt="prev"
+                    width="250"
+                />
             </div>
             <div className="results__item-info">
                 <div className="results__item-categories">

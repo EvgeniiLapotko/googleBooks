@@ -1,7 +1,7 @@
 let initialState = {
     item: [],
     total: 0,
-    setLoaded: false,
+    loader: false,
 };
 
 const bookshReducer = (state = initialState, action) => {
@@ -11,6 +11,11 @@ const bookshReducer = (state = initialState, action) => {
                 ...state,
                 item: action.payload.item,
                 total: action.payload.results,
+            };
+        case "SETLOADED":
+            return {
+                ...state,
+                loader: action.payload,
             };
 
         default:
