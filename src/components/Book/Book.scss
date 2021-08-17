@@ -1,0 +1,50 @@
+.book__wrapper {
+    max-width: 1030;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.book__inner {
+    display: flex;
+    // align-items: center;
+    padding: 50px 0;
+}
+
+.book__item-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--block {
+        text-align: center;
+        width: 230px;
+        img {
+            width: inherit;
+        }
+    }
+}
+
+.book__item {
+    width: 50%;
+    &-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #001;
+        margin-bottom: 25px;
+    }
+    &-categories {
+        margin-bottom: 10px;
+        span {
+            color: grey;
+            text-decoration: underline;
+        }
+    }
+    &-author {
+        margin-bottom: 30px;
+        span {
+            color: grey;
+            text-decoration: underline;
+        }
+    }
+}

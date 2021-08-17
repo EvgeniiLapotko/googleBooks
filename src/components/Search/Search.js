@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Redirect, withRouter } from "react-router-dom";
 
 import "./Search.scss";
 
 import { ImSearch } from "react-icons/im";
 import { getBooks } from "../../redux/actions/actionBooks";
-function Search() {
+import { actionSearch } from "../../redux/actions";
+function Search({ history }) {
     const [textFeild, setTextFeild] = useState("");
     const [categories, setCategories] = useState("all");
     const [sorting, setSorting] = useState("relevance");
@@ -14,8 +16,13 @@ function Search() {
 
     const submitForm = (e) => {
         e.preventDefault();
+        dispatch(actionSearch.setSerach(textFeild, categories, sorting));
         dispatch(getBooks(textFeild, categories, sorting));
+        setTextFeild("");
+        history.push("/");
+        return <Redirect exact to="/" />;
     };
+
     return (
         <section className="search">
             <div className="search__wrapper">
@@ -29,6 +36,7 @@ function Search() {
                                 value={textFeild}
                                 onChange={(e) => setTextFeild(e.target.value)}
                             />
+
                             <button type="submit" className="search__form-btn">
                                 <ImSearch className="search__form-btn-icon" />
                             </button>
@@ -80,4 +88,4 @@ function Search() {
     );
 }
 
-export default Search;
+export default withRouter(Search);

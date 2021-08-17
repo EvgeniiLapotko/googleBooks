@@ -9,6 +9,10 @@
     &-img {
         text-align: center;
         margin-bottom: 20px;
+        height: 380px;
+        img {
+            height: inherit;
+        }
     }
     &-categories {
         color: grey;

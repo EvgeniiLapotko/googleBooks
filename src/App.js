@@ -1,11 +1,17 @@
 import React from "react";
-import { SearchBlock, ListBooks } from "./components";
+import { SearchBlock, ListBooks, Book } from "./components";
+import { Route } from "react-router-dom";
 
 function App() {
     return (
         <>
             <SearchBlock />
-            <ListBooks />
+            <Route exact path="/">
+                <ListBooks />
+            </Route>
+            <Route path="/book/:id">
+                <Book />
+            </Route>
         </>
     );
 }

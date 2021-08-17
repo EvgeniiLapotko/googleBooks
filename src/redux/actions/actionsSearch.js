@@ -1,7 +1,11 @@
 const actions = {
-    setSerach: (item) => ({
-        type: "SEARCH:SET_SEARCH_TEXT",
-        payload: item,
+    setSerach: (textFeild, categories, sorting) => ({
+        type: "SET_SEARCH_DATA",
+        payload: {
+            textFeild,
+            categories,
+            sorting,
+        },
     }),
 };
 
