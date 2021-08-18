@@ -1,0 +1,31 @@
+@media (max-width: 530px) {
+    .search__title {
+        font-size: 33px;
+        text-align: center;
+    }
+    .search__form-sort-block {
+        flex-direction: column;
+    }
+    .search__form-block {
+        flex-direction: column;
+    }
+    .search__form-text {
+        font-size: 20px;
+    }
+    .search__form-block label {
+        padding-right: 0;
+        padding-bottom: 5px;
+    }
+    .search__form-section {
+        width: 50%;
+    }
+    .search__form-categories {
+        margin-bottom: 5px;
+    }
+    .results__wrapper h2 {
+        font-size: 26px;
+    }
+    .results__empty-icon {
+        font-size: 110px;
+    }
+}

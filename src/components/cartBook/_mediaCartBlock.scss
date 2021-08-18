@@ -1,0 +1,29 @@
+@media (max-width: 1250px) {
+    .results__item {
+        width: calc(33% - 25px);
+        &-img {
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            img {
+                display: block;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 890px) {
+    .results__item {
+        width: calc(50% - 25px);
+    }
+}
+
+@media (max-width: 890px) {
+    .results__item {
+        max-width: 350px;
+        width: 100%;
+        margin-left: 0;
+    }
+}

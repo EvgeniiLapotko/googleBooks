@@ -1,8 +1,9 @@
 .book__wrapper {
-    max-width: 1030;
+    max-width: 1030px;
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .book__inner {
@@ -17,10 +18,14 @@
     align-items: center;
     justify-content: center;
     &--block {
-        text-align: center;
-        width: 230px;
+        padding: 5px 40px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
         img {
             width: inherit;
+            display: block;
         }
     }
 }
@@ -48,3 +53,36 @@
         }
     }
 }
+
+.book_btn {
+    display: block;
+    text-align: center;
+    transition: color 0.4s;
+    button {
+        outline: none;
+        width: 50%;
+        padding: 10px 10px;
+        background-color: #015a84;
+        border: none;
+        border-radius: 7px;
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+    }
+    .book_btn-icon {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        font-size: 26px;
+        transform: translateY(-50%);
+        color: rgba(#fff, 0.5);
+        transition: color 0.4s;
+    }
+    &:hover {
+        .book_btn-icon {
+            color: #fff;
+        }
+    }
+}
+
+@import "mediaBook";

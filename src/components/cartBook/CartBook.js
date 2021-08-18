@@ -11,7 +11,6 @@ function CartBook({ image, title, authors, categories, onClick, id }) {
                     <img
                         src={image === undefined ? bg : image.thumbnail}
                         alt="prev"
-                        width="250"
                     />
                 </div>
                 <div className="results__item-info">

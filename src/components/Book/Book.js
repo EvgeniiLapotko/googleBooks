@@ -2,7 +2,8 @@ import { span } from "prelude-ls";
 import React from "react";
 import { useSelector } from "react-redux";
 import cover from "../../img/cover.jpg";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
+import { IoArrowBackCircleOutline } from "react-icons/io5";
 
 import "./Book.scss";
 
@@ -61,6 +62,12 @@ function Book() {
                                     </div>
                                 </div>
                             </div>
+                            <Link to="/" className="book_btn">
+                                <button>
+                                    <IoArrowBackCircleOutline className="book_btn-icon" />
+                                    К странице поиска
+                                </button>
+                            </Link>
                         </div>
                     </section>
                 )}
