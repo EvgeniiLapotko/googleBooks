@@ -37,7 +37,7 @@ export const getBooks = (text, categories, sorting) => async (dispatch) => {
             .get(
                 `https://www.googleapis.com/books/v1/volumes?q=${text}${
                     categories === "all" ? "" : `+subject: ${categories}`
-                }&orderBy=${sorting}&startIndex=0&maxResults=30&key=AIzaSyBMrcf7kAfixlZLo9eh2CH_hcjHpodt6_k`
+                }&orderBy=${sorting}&printType=books&startIndex=0&maxResults=30&key=AIzaSyBMrcf7kAfixlZLo9eh2CH_hcjHpodt6_k`
             )
             .then((resolve) => resolve.data);
         dispatch(actions.setLoaded(false));
@@ -56,7 +56,7 @@ export const addedBooks =
                 .get(
                     `https://www.googleapis.com/books/v1/volumes?q=${text}${
                         categories === "all" ? "" : `+subject: ${categories}`
-                    }&orderBy=${sorting}&startIndex=${startIndex}&maxResults=30&key=AIzaSyBMrcf7kAfixlZLo9eh2CH_hcjHpodt6_k`
+                    }&orderBy=${sorting}&printType=books&startIndex=${startIndex}&maxResults=30&key=AIzaSyBMrcf7kAfixlZLo9eh2CH_hcjHpodt6_k`
                 )
                 .then((resolve) => resolve.data);
             dispatch(actions.setLoadedMore(false));
